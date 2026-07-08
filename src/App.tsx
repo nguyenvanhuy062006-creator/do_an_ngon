@@ -31,10 +31,6 @@ function App() {
 
         <button onClick={toggleLanguage} style={{padding: '8px 16px', marginRight:'10px'}}>VI/EN</button>
         <button onClick={handleAddToCart} style={{padding: '8px 16px'}}>Thêm vào giỏ hàng</button>
-      
-
-
-
       </div>
     </div>
   );
