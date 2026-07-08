@@ -1,0 +1,15 @@
+export const uiText = {
+  brandName: { vi: 'Bếp Nhà Huy', en: 'Bep Nha Huy' },
+  tagline: { vi: 'Ngon mỗi ngày', en: 'Delicious every day' },
+  searchPlaceholder: { vi: 'Tìm món ăn...', en: 'Search dishes...' },
+  categoriesLabel: { vi: 'Danh mục', en: 'Categories' },
+  allCategory: { vi: 'Tất cả', en: 'All' },
+  cartLabel: { vi: 'Giỏ hàng', en: 'Cart' },
+  addToCart: { vi: 'Thêm vào giỏ', en: 'Add to cart' },
+  buyNow: { vi: 'Mua', en: 'Buy' },
+  viewAll: { vi: 'Xem tất cả các món', en: 'View all dishes' },
+  noResults: { vi: 'Không tìm thấy món ăn phù hợp', en: 'No dishes found' },
+  addressLabel: { vi: 'Địa chỉ', en: 'Address' },
+  hotlineLabel: { vi: 'Hotline', en: 'Hotline' },
+  branchLabel: { vi: 'Cơ sở', en: 'Branches' },
+};
