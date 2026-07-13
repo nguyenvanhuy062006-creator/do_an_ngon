@@ -3,7 +3,7 @@ import type { BannerSlide } from '../types';
 export const bannerSlides: BannerSlide[] = [
   {
     id: 'banner-1',
-    title: { vi: 'Giảm giá 10% cho đơn đầu tiên', en: '20% off your first order' },
+    title: { vi: 'Giảm giá 20% cho đơn đầu tiên', en: '20% off your first order' },
     emoji: '🎉',
   },
   {

@@ -1,0 +1,76 @@
+.banner {
+  position: relative;
+  margin: 24px 32px 0;
+  min-height: 160px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.banner-emoji {
+  font-size: 40px;
+}
+
+.banner-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--color-text);
+  text-align: center;
+  padding: 0 60px;
+}
+
+.banner-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-arrow-left {
+  left: 16px;
+}
+
+.banner-arrow-right {
+  right: 16px;
+}
+
+.banner-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.banner-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-border);
+}
+
+.banner-dot.active {
+  background-color: var(--color-accent-turmeric);
+}

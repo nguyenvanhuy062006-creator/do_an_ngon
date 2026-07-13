@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import type { Language } from './types';
+import { categories } from './data/menuData';
+import Header from './components/Header';
+import Banner from './components/Banner';
+import MenuSection from './components/MenuSection';
+import Footer from './components/Footer';
+
 import './App.scss';
+
 
 function App() {
   const [language, setLanguage] = useState<Language>('vi');
@@ -10,28 +17,35 @@ function App() {
 
   function toggleLanguage() {
     setLanguage(language === 'vi' ? 'en' : 'vi');
-    console.log("Đã đổi ngôn ngữ người dùng:",language == 'vi'?'en':'vi');
   }
 
   function handleAddToCart() {
     setCartCount(cartCount + 1);
-    console.log("Số lượng giỏ hàng hiện tại: ",cartCount +1);
   }
 
   return (
     <div className="app">
-      <div style ={{padding: '30px', borderBottom: '1px solid var(--color-border)'}}>
-        <h1>Bếp Nhà Huy</h1>
-        <p>Ngôn ngữ hiện tại: <strong>{language.toUpperCase()}</strong></p>
-        <p>Danh mục đang chọn: <strong>{activeCategory}</strong></p>
-        <p>Từ khoá tìm kiếm: <strong>{searchTerm || 'Chưa có gì'}</strong></p>
-        <p>Số món trong giỏ: <strong>{cartCount}</strong></p>
+      <Header
+        language={language}
+        onToggleLanguage={toggleLanguage}
+        cartCount={cartCount}
+        categories={categories}
+        activeCategory={activeCategory}
+        onSelectCategory={setActiveCategory}
+        searchTerm={searchTerm}
+        onSearchChange={setSearchTerm}
+      />
 
-        <hr style={{borderColor: 'var(--color-border)',margin:'20px 0'}}></hr>
+      <Banner language={language} />
 
-        <button onClick={toggleLanguage} style={{padding: '8px 16px', marginRight:'10px'}}>VI/EN</button>
-        <button onClick={handleAddToCart} style={{padding: '8px 16px'}}>Thêm vào giỏ hàng</button>
-      </div>
+      <MenuSection
+        language={language}
+        activeCategory={activeCategory}
+        searchTerm={searchTerm}
+        onAddToCart={handleAddToCart}
+      />
+
+      <Footer language={language} />
     </div>
   );
 }
