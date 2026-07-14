@@ -36,7 +36,7 @@ function Header({
     <header className="header">
       <div className="header-row header-row-top">
         <div className="header-logo">
-          <span className="header-logo-circle">🍜</span>
+          <span className="header-logo-circle"><img src='src/assets/Gemini_Generated_Image_qgzqlyqgzqlyqgzq.png' alt='logo' width={65} height={55}/></span>
           <div>
             <p className="header-logo-name">{getText(uiText.brandName, language)}</p>
             <p className="header-logo-tagline">{getText(uiText.tagline, language)}</p>
@@ -46,7 +46,7 @@ function Header({
         <div className="header-top-actions">
           <div className="header-pill header-hotline">
             <span>📞</span>
-            <span>8686 8686</span>
+            <span>0329 500 326</span>
           </div>
 
           <div className="header-pill header-cart">
@@ -56,7 +56,7 @@ function Header({
           </div>
 
           <button className="header-lang-btn" onClick={onToggleLanguage}>
-            {language === 'vi' ? 'VI' : 'EN'}
+            {language === 'vi' ? 'VI/EN' : 'EN/VI'}
           </button>
         </div>
       </div>
